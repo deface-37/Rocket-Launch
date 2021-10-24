@@ -1,0 +1,127 @@
+body {
+    background: black;
+    margin: 0;
+    height: 100vh;
+}
+
+.space {
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    background: url("assets/space.png");
+    position: relative;
+}
+
+.planet-area {
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.planet {
+    position: absolute;
+    left: -2px;
+    bottom: -2px;
+    width: 100%;
+    z-index: 1;
+}
+
+.rocket {
+    position: absolute;
+    width: 40%;
+    bottom: 40%;
+    right: 0;
+    transform: rotate(35deg);
+}
+
+.control-panel {
+    position: absolute;
+    right: 15px;
+    bottom: 50px;
+    width: 40%;
+    max-width: 450px;
+    background: linear-gradient(#26242fe3, #33738e);
+    border-radius: 15px;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.control-panel__inner > div {
+    width: 90%;
+    margin: 15px auto;
+    border-radius: 15px;
+    background-color: #5e60b945;
+    border: 1px solid white;
+    padding: 15px 0;
+}
+
+.control-panel input[type="button"] {
+    border-radius: 10px;
+    border: none;
+}
+
+.control-panel input[type="button"]:disabled {
+    background-color: #909aae;
+}
+
+.password-button {
+    width: 45px;
+}
+
+.password-button {
+    height: 20px;
+    background-color: lightblue;
+}
+
+.password-button:active {
+    background-color: #869ab3;
+}
+
+.password-input {
+    height: 20px;
+    width: 50%;
+    border-radius: 5px;
+    margin-right: 5%;
+    border: 3px solid darkslateblue;
+    color: darkslateblue;
+}
+
+.check-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.levers {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.levers>input {
+    -webkit-appearance: slider-vertical;
+    height: 100px;
+    width: 10px;
+}
+.launch {
+    width: 80px;
+    height: 35px;
+    margin-top: 5px;
+    background-color: #5384d0;
+    color: white;
+    text-transform: uppercase;
+}
+
+.launch:active {
+    background-color: #4672b7;;
+}
+
+.rocket {
+    transition: transform 2s ease-in;
+}
+.rocket.launched {
+    transform: rotate(35deg) translateY(-400%);
+}
